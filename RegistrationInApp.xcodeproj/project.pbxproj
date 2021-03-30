@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		5E73349D26133AE3005D740E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E73349C26133AE3005D740E /* AppDelegate.swift */; };
 		5E73349F26133AE3005D740E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E73349E26133AE3005D740E /* SceneDelegate.swift */; };
-		5E7334A126133AE3005D740E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7334A026133AE3005D740E /* ViewController.swift */; };
+		5E7334A126133AE3005D740E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7334A026133AE3005D740E /* MainViewController.swift */; };
 		5E7334A426133AE3005D740E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7334A226133AE3005D740E /* Main.storyboard */; };
 		5E7334A626133AE7005D740E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7334A526133AE7005D740E /* Assets.xcassets */; };
 		5E7334A926133AE7005D740E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7334A726133AE7005D740E /* LaunchScreen.storyboard */; };
+		5E7334B326135557005D740E /* PersonalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7334B226135557005D740E /* PersonalProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E73349926133AE3005D740E /* RegistrationInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E73349C26133AE3005D740E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E73349E26133AE3005D740E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5E7334A026133AE3005D740E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E7334A026133AE3005D740E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5E7334A326133AE3005D740E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E7334A526133AE7005D740E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E7334A826133AE7005D740E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E7334AA26133AE7005D740E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E7334B226135557005D740E /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				5E73349C26133AE3005D740E /* AppDelegate.swift */,
 				5E73349E26133AE3005D740E /* SceneDelegate.swift */,
-				5E7334A026133AE3005D740E /* ViewController.swift */,
+				5E7334A026133AE3005D740E /* MainViewController.swift */,
+				5E7334B226135557005D740E /* PersonalProfileViewController.swift */,
 				5E7334A226133AE3005D740E /* Main.storyboard */,
 				5E7334A526133AE7005D740E /* Assets.xcassets */,
 				5E7334A726133AE7005D740E /* LaunchScreen.storyboard */,
@@ -137,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7334A126133AE3005D740E /* ViewController.swift in Sources */,
+				5E7334A126133AE3005D740E /* MainViewController.swift in Sources */,
 				5E73349D26133AE3005D740E /* AppDelegate.swift in Sources */,
+				5E7334B326135557005D740E /* PersonalProfileViewController.swift in Sources */,
 				5E73349F26133AE3005D740E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,10 +297,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = golubevaAnna.RegistrationInApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,10 +317,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = golubevaAnna.RegistrationInApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
