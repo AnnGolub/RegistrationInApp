@@ -21,8 +21,7 @@ class PersonalProfileViewController: UIViewController {
         logOutButton.layer.cornerRadius = 16
     }
     
-    @IBAction func logOutAction() {
-        dismiss(animated: true)
-    }
+    
+    
 }
 

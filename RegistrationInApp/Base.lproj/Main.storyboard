@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="58" width="374" height="34"/>
                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sal-Hg-bel">
                                         <rect key="frame" x="0.0" y="116" width="374" height="36"/>
@@ -127,7 +127,7 @@
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="logOutAction" destination="YlG-w6-fZV" eventType="touchUpInside" id="MKN-eK-Ycz"/>
+                                    <segue destination="CKy-Xo-HRW" kind="unwind" unwindAction="unwindFor:" id="e5R-HC-PIr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -142,11 +142,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logOutButton" destination="KUu-y6-izi" id="Ogd-AF-1PK"/>
+                        <outlet property="logOutButton" destination="KUu-y6-izi" id="2f1-mJ-eZl"/>
                         <outlet property="welcomeMessage" destination="Itg-Y0-kGd" id="oPa-pg-syQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHL-Jv-eOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="CKy-Xo-HRW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="830" y="76"/>
         </scene>
