@@ -9,50 +9,47 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    // MARK: - IB Outlets
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    
     @IBOutlet weak var logInButton: UIButton!
+    
+    // MARK: - Private properties
+    private let user = "User"
+    private let password = "12345"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         logInButton.layer.cornerRadius = 16
     }
     
-    @IBAction func forgotUserNameButtonPressed() {
-        showAllert(with: "Ooops", message: "Your name is User")
-    }
-    
-    @IBAction func forgotPasswordButtonPressed() {
-        showAllert(with: "Ooops", message: "Your password is 12345")
-    }
-    
-    
-    @IBAction func logInButtonPressed() {
-        guard let inputUserName = userNameTF.text, !inputUserName.isEmpty else {
-            forgotUserNameButtonPressed()
-            return
-        }
-        guard let inputPassword = passwordTF.text, !inputPassword.isEmpty else {
-            forgotPasswordButtonPressed()
-            return
-        }
-        if let _ = Double(inputUserName) {
-            showAllert(with: "Ooops", message: "Not correct")
-            return
-        }
-    }
-    
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let personalProfileVC = segue.destination as?
                 PersonalProfileViewController else { return }
-        personalProfileVC.welcomeUserName = userNameTF.text
+        personalProfileVC.welcomeUserName = user
+    }
+    
+    // MARK: IBActions
+    @IBAction func logInButtonPressed() {
+        if userNameTF.text != user || passwordTF.text != password {
+            showAllert(
+                with: "Invalid login or password",
+                message: "Enter correct login and password"
+            )
+            return
+        }
+        
+        performSegue(withIdentifier: "showPersonalProfileVC", sender: nil)
+    }
+    
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+            ? showAllert(with: "Oops", message: "Your user name is \(user)")
+            : showAllert(with: "Oops", message: "Your password is \(password)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let _ = segue.source as?
-                PersonalProfileViewController else { return }
         userNameTF.text = ""
         passwordTF.text = ""
     }
@@ -68,8 +65,25 @@ extension MainViewController {
                                       preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .default)
-        
+        passwordTF.text = ""
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+// MARK: - Work with keyboard
+extension MainViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            logInButtonPressed()
+        }
+        return true
     }
 }
