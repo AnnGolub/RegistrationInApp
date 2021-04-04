@@ -13,10 +13,12 @@ class PersonalProfileViewController: UIViewController {
     @IBOutlet weak var logOutButton: UIButton!
     
     var welcomeUserName = ""
-    
+   
+    let person = Person.init()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeMessage.text = welcomeUserName
+        welcomeMessage.text = person.name
         
         logOutButton.layer.cornerRadius = 16
     }

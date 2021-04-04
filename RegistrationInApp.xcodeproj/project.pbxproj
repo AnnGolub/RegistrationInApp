@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E29E00726184B6E007275CE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E29E00626184B6E007275CE /* Person.swift */; };
+		5E422F3A2618A1A60097B59F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E422F392618A1A60097B59F /* AboutViewController.swift */; };
+		5E422F3D2618A2E30097B59F /* ProfessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E422F3C2618A2E30097B59F /* ProfessionViewController.swift */; };
 		5E73349D26133AE3005D740E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E73349C26133AE3005D740E /* AppDelegate.swift */; };
 		5E73349F26133AE3005D740E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E73349E26133AE3005D740E /* SceneDelegate.swift */; };
 		5E7334A126133AE3005D740E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7334A026133AE3005D740E /* MainViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E29E00626184B6E007275CE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		5E422F392618A1A60097B59F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		5E422F3C2618A2E30097B59F /* ProfessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionViewController.swift; sourceTree = "<group>"; };
 		5E73349926133AE3005D740E /* RegistrationInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E73349C26133AE3005D740E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E73349E26133AE3005D740E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,16 +64,59 @@
 		5E73349B26133AE3005D740E /* RegistrationInApp */ = {
 			isa = PBXGroup;
 			children = (
-				5E73349C26133AE3005D740E /* AppDelegate.swift */,
-				5E73349E26133AE3005D740E /* SceneDelegate.swift */,
-				5E7334A026133AE3005D740E /* MainViewController.swift */,
-				5E7334B226135557005D740E /* PersonalProfileViewController.swift */,
-				5E7334A226133AE3005D740E /* Main.storyboard */,
-				5E7334A526133AE7005D740E /* Assets.xcassets */,
-				5E7334A726133AE7005D740E /* LaunchScreen.storyboard */,
-				5E7334AA26133AE7005D740E /* Info.plist */,
+				5ED80979261737F700E5B02F /* ViewControllers */,
+				5ED8097A2617382600E5B02F /* Models */,
+				5ED8097B2617385500E5B02F /* Storyboards */,
+				5ED8097D261738E000E5B02F /* Supporting */,
+				5ED8097C2617388100E5B02F /* Resources */,
 			);
 			path = RegistrationInApp;
+			sourceTree = "<group>";
+		};
+		5ED80979261737F700E5B02F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E7334A026133AE3005D740E /* MainViewController.swift */,
+				5E422F3C2618A2E30097B59F /* ProfessionViewController.swift */,
+				5E422F392618A1A60097B59F /* AboutViewController.swift */,
+				5E7334B226135557005D740E /* PersonalProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5ED8097A2617382600E5B02F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E29E00626184B6E007275CE /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5ED8097B2617385500E5B02F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5E7334A226133AE3005D740E /* Main.storyboard */,
+				5E7334A726133AE7005D740E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5ED8097C2617388100E5B02F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5E7334A526133AE7005D740E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5ED8097D261738E000E5B02F /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				5E73349C26133AE3005D740E /* AppDelegate.swift */,
+				5E73349E26133AE3005D740E /* SceneDelegate.swift */,
+				5E7334AA26133AE7005D740E /* Info.plist */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E422F3D2618A2E30097B59F /* ProfessionViewController.swift in Sources */,
+				5E422F3A2618A1A60097B59F /* AboutViewController.swift in Sources */,
+				5E29E00726184B6E007275CE /* Person.swift in Sources */,
 				5E7334A126133AE3005D740E /* MainViewController.swift in Sources */,
 				5E73349D26133AE3005D740E /* AppDelegate.swift in Sources */,
 				5E7334B326135557005D740E /* PersonalProfileViewController.swift in Sources */,
@@ -292,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6R4F958A4H;
-				INFOPLIST_FILE = RegistrationInApp/Info.plist;
+				INFOPLIST_FILE = RegistrationInApp/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +364,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6R4F958A4H;
-				INFOPLIST_FILE = RegistrationInApp/Info.plist;
+				INFOPLIST_FILE = RegistrationInApp/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
